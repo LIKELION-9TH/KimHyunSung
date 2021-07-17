@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
-
 {% block contents %}
 
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +10,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/music.css">
+    <style>
+        body {
+            background-image: url('https://www.wallpapertip.com/wmimgs/79-796231_apple-iphone-x-landing-page-blank-png-iphone.png');
+            background-repeat: no-repeat;
+            background-size: 300px;
+            background-position-x: center;
+            background-position-y: 100px;
+        }
+        #songs {
+            text-align: center;
+        }
+        #add {
+            text-align: center;
+            margin-top: 280px;
+            position: fixed;
+        }
+        a:link { 
+            color:pink; 
+        }
+        a:visited { 
+            color:pink; 
+        }
+        a:hover { 
+            color:rgb(201, 126, 191); 
+        }
+    </style>
     <title>my playlist</title>
 </head>
 
@@ -17,14 +43,20 @@
     <div class="wrapper">
         <h1> my favorite playlist ..♡ </h1>
         <br><br>
-        {% for song in songs %}
-        {{song.title}}
-        - {{song.singer}}
-        ✧ {{song.body}}
-        <a href="{% url 'delete' song.id %}">bye</a>
-        <br>
-        {% endfor %}
-        <a href="{%url 'new'%}">hi</a>
+        <!--<img src="{% static 'iphone_whitescreen.png'%}" height="100%" alt="아이폰사진">-->
+        <div id="songs">
+            ~ 현성's playlist ~<br><br>
+            {% for song in songs %}
+            {{song.title}}
+            - {{song.singer}} <br>
+            ✧ {{song.body}}
+            <a href="{% url 'delete' song.id %}">bye</a>
+            <br><br>
+            {% endfor %}
+        </div>
+        <div id="add">
+            <a href="{%url 'new'%}">hi</a>
+        </div>
     </div>
 </body>
 

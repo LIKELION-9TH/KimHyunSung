@@ -10,7 +10,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/place.css">
+    <link rel="stylesheet" type="text/css" href="../css/place.css">
+    <style>
+        .place {
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
     <title>my playlist</title>
 </head>
 
@@ -18,15 +27,36 @@
     <div class="wrapper">
         <h1> my favorite place !! </h1>
         <br><br>
-        <div id="firstplace">
-            <h5> -ˋˏ 아우어룸 @our_room_seoul ˎˊ- </h5>
+        <div class="place">
+            <h5> -ˋˏ 아우어룸 @our_room_seoul ˎˊ- </h5> <br>
             <img src="{% static 'ourrom1.jpg'%}" height="300px" alt="아우어룸1">
             <img src="{% static 'ourrom2.jpg'%}" height="300px" alt="아우어룸2">
             <img src="{% static 'ourrom3.jpg'%}" height="300px" alt="아우어룸3">
             <img src="{% static 'ourrom4.jpg'%}" height="300px" alt="아우어룸4">
-            <p>서울 강동구 양재대로110길 47 1층에 위치한  <b>아우어룸</b></p>
+            <br><br><p>서울 강동구 양재대로110길 47 1층에 위치한  <b>아우어룸</b></p>
             <p>유튜브에서 알게 된 카페인데, 집과 은근 가깝길래 한 번 방문한 뒤로 단골이 되었어요</p>
             <p>힙한 사장님과 귀여운 짬뽕이가 반겨준답니다</p>
+        </div>
+        <div class="place">
+            <br><br><h5> -ˋˏ 덕풍천 ˎˊ- </h5> <br>
+            <img src="{% static 'ourrom1.jpg'%}" height="300px" alt="아우어룸1">
+            <img src="{% static 'ourrom2.jpg'%}" height="300px" alt="아우어룸2">
+            <img src="{% static 'ourrom3.jpg'%}" height="300px" alt="아우어룸3">
+            <img src="{% static 'ourrom4.jpg'%}" height="300px" alt="아우어룸4">
+            <br><br><p>경기도 하남시 우리집 뒤에 위치한 <b>덕풍천</b></p>
+            <p>하남시민이라면 꼭 한 번은 산책해봤을 곳이에요</p>
+            <p>덕풍천은 하남의 거의 모든(?) 곳과 연결되어 있어서 쭉 따라가면 여러 군데를 들릴 수 있답니다.</p>
+            <p>저는 이 길을 따라 스타필드에 자주 걸어가요</p>
+        </div>
+        <div class="place">
+            <br><br><h5> -ˋˏ 스타필드 하남 ˎˊ- </h5> <br>
+            <img src="{% static 'ourrom1.jpg'%}" height="300px" alt="아우어룸1">
+            <img src="{% static 'ourrom2.jpg'%}" height="300px" alt="아우어룸2">
+            <img src="{% static 'ourrom3.jpg'%}" height="300px" alt="아우어룸3">
+            <img src="{% static 'ourrom4.jpg'%}" height="300px" alt="아우어룸4">
+            <br><br><p>경기 하남시 미사대로 750에 위치한  <b>스타필드 하남</b></p>
+            <p>하남의 자랑, 하남의 랜드마크, 하남의 유일한 내세울 것</p>
+            <p>앞서 말한 덕풍천을 따라 걸어가기 좋은 곳이라 자주 가는데, 사람이 없는 시간대에 혼자 가서 걸어다니며 구경하면 넘 재밌어요</p><br><br>
         </div>
     </div>
 </body>
