@@ -2,9 +2,31 @@
 
 {% block contents %}
 
-<br>
-<div class="container"> 
-  <h1>hi 에이치 아이 ~ 난 현성이야</h1>
-</div>
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/home.css">
+    <title>main</title>
+</head>
+<body>
+    <div id="">
+        <div id="introduce">  
+            <img src="{% static 'profile.jpg'%}" alt="프사">  
+            <p>안녕하세요. 성신여자대학교 컴퓨터공학과 4학년이자 멋쟁이 사자처럼 9기 김현성입니다. 
+                <br>
+            </p>
+        </div>
+        <div id="">
+
+        </div>
+    
+    </div>
+</body>
+</html>
 
 {% endblock %}

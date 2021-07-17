@@ -2,6 +2,33 @@
 
 {% block contents %}
 
-<h1>in my playlist .. </h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/music.css">
+    <title>my playlist</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1> my favorite playlist ..♡ </h1>
+        <br><br>
+        {% for song in songs %}
+        {{song.title}}
+        - {{song.singer}}
+        ✧ {{song.body}}
+        <a href="{% url 'delete' song.id %}">bye</a>
+        <br>
+        {% endfor %}
+        <a href="{%url 'new'%}">hi</a>
+    </div>
+</body>
+
+</html>
+
 
 {% endblock %}

@@ -1,7 +1,37 @@
 {% extends 'base.html' %}
-
 {% block contents %}
 
-<h1>my place</h1>
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/place.css">
+    <title>my playlist</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1> my favorite place !! </h1>
+        <br><br>
+        <div id="firstplace">
+            <h5> -ˋˏ 아우어룸 @our_room_seoul ˎˊ- </h5>
+            <img src="{% static 'ourrom1.jpg'%}" height="300px" alt="아우어룸1">
+            <img src="{% static 'ourrom2.jpg'%}" height="300px" alt="아우어룸2">
+            <img src="{% static 'ourrom3.jpg'%}" height="300px" alt="아우어룸3">
+            <img src="{% static 'ourrom4.jpg'%}" height="300px" alt="아우어룸4">
+            <p>서울 강동구 양재대로110길 47 1층에 위치한  <b>아우어룸</b></p>
+            <p>유튜브에서 알게 된 카페인데, 집과 은근 가깝길래 한 번 방문한 뒤로 단골이 되었어요</p>
+            <p>힙한 사장님과 귀여운 짬뽕이가 반겨준답니다</p>
+        </div>
+    </div>
+</body>
+
+</html>
+
 
 {% endblock %}
