@@ -10,7 +10,9 @@ urlpatterns = [
     path('place', pfapp.views.place, name = "place" ),
     path('music', pfapp.views.music, name = "music" ),
     path('qna', pfapp.views.qna, name = "qna" ),
-    path('new', pfapp.views.new, name="new"),
-    path('create', pfapp.views.create, name="create"),
-    path('delete/<str:id>', pfapp.views.delete, name="delete"),
+    path('new', pfapp.views.newmusic, name="new"),
+    path('create', pfapp.views.createsong, name="create"),
+    path('delete/<str:id>', pfapp.views.deletesong, name="delete"),
+    path('edit/<str:id>', pfapp.views.editsong, name="edit"),
+    path('update/<str:id>', pfapp.views.update, name="update"),
 ]

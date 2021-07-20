@@ -16,15 +16,20 @@
             background-repeat: no-repeat;
             background-size: 300px;
             background-position-x: center;
-            background-position-y: 100px;
+            background-position-y: 115px;
+        }
+        h1 {
+            text-align: center;
         }
         #songs {
             text-align: center;
         }
         #add {
             text-align: center;
+            position:   fixed;
+            left:       0;
+            bottom:     0;
             margin-top: 280px;
-            position: fixed;
         }
         a:link { 
             color:pink; 
@@ -45,17 +50,18 @@
         <br><br>
         <!--<img src="{% static 'iphone_whitescreen.png'%}" height="100%" alt="아이폰사진">-->
         <div id="songs">
-            ~ 현성's playlist ~<br><br>
+            ~ 현성's playlist ~ &nbsp;
+            <a href="{%url 'new'%}">hi</a><br><br>
+
             {% for song in songs %}
             {{song.title}}
             - {{song.singer}} <br>
             ✧ {{song.body}}
-            <a href="{% url 'delete' song.id %}">bye</a>
+            
+            <a href="{% url 'edit' song.id %}" style="font-size: small;">edit</a>
+            <a href="{% url 'delete' song.id %}" style="font-size: small;">bye</a>
             <br><br>
             {% endfor %}
-        </div>
-        <div id="add">
-            <a href="{%url 'new'%}">hi</a>
         </div>
     </div>
 </body>

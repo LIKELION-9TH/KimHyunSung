@@ -1,0 +1,41 @@
+<!--좋아하는 음악 추가 (create)-->
+{% extends 'base.html' %}
+
+{% block contents %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            text-align: center;
+        }
+        button {
+            background-color: pink;
+        }
+    </style>
+    <title>welcome to my playlist</title>
+</head>
+
+<body>
+    <br><br><h2> ⋆˚.•  내 플레이리스트에 들어온 걸 환영해  •✩‧₊⋆</h2>
+    <br><br>
+    <form action="{%url 'update' song.id%}" method="POST">
+        {%csrf_token%}
+        <p>노래: <input type="text" name="title" value="{{song.title}}"></p>
+        <p>가수: <input type="text" name="singer" value="{{song.singer}}"></p>
+        <br>
+        ✧✧✧ <br>
+        <textarea name="body" id="" cols="30" rows="10">{{song.body}}</textarea>
+        <br><br>
+        <button type="submit">수정</button>
+    </form>
+</body>
+
+</html>
+
+
+{% endblock %}
