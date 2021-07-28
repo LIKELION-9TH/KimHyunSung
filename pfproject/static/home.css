@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+}
+#introduce {
+    width: 100%;
+    margin-left: 15px;
+    margin-top: 7em;
+}
+a:link { 
+    color:pink; 
+}
+a:visited { 
+    color:pink; 
+}
+a:hover { 
+    color:rgb(201, 126, 191); 
+}

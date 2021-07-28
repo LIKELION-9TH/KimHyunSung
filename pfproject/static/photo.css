@@ -1,0 +1,32 @@
+body {
+    background-image: url('../static/monitor.png');
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position-x: center;
+    background-position-y: 115px;
+    text-align: center;
+}
+h1 {
+    color: #f06595 ;
+}
+#songs {
+    text-align: center;
+}
+#add {
+    text-align: center;
+    position:   fixed;
+    left:       0;
+    bottom:     0;
+    margin-top: 280px;
+}
+.wrapper {
+}
+a:link { 
+    color:pink; 
+}
+a:visited { 
+    color:pink; 
+}
+a:hover { 
+    color:rgb(201, 126, 191); 
+}

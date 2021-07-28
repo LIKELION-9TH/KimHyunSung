@@ -1,4 +1,4 @@
-<!--좋아하는 음악 추가 (create)-->
+<!--사진 추가 (create)-->
 {% extends 'base.html' %}
 
 {% block contents %}
@@ -17,16 +17,16 @@
             background-color: pink;
         }
     </style>
-    <title>welcome to my playlist</title>
+    <title>welcome to my album</title>
 </head>
 
 <body>
-    <br><br><h2> ⋆˚.•  내 플레이리스트에 들어온 걸 환영해  •✩‧₊⋆</h2>
+    <br><br><h2> ⋆˚.•  내가 찍은 사진 •✩‧₊⋆</h2>
     <br><br>
-    <form action="{%url 'createsong'%}" method="POST">
+    <form action="{%url 'createphoto'%}" method="POST" enctype="multipart/formdata">
         {%csrf_token%}
-        <p>노래: <input type="text" name="title"></p>
-        <p>가수: <input type="text" name="singer"></p>
+        <p>image <input type="file" name="image" accept="image/jpeg, image/jpg" required></p>
+        <p>title: <input type="text" name="title"></p>
         <br>
         ✧✧✧ <br>
         <textarea name="body" id="" cols="30" rows="10"></textarea>

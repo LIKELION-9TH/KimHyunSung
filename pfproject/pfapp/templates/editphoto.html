@@ -17,21 +17,20 @@
             background-color: pink;
         }
     </style>
-    <title>welcome to my playlist</title>
+    <title>welcome to my album</title>
 </head>
 
 <body>
-    <br><br><h2> ⋆˚.•  내 플레이리스트에 들어온 걸 환영해  •✩‧₊⋆</h2>
+    <br><br><h2> ⋆˚.•  내가 찍은 사진  •✩‧₊⋆</h2>
     <br><br>
-    <form action="{%url 'createsong'%}" method="POST">
+    <form action="{%url 'updatesong' song.id%}" method="POST">
         {%csrf_token%}
-        <p>노래: <input type="text" name="title"></p>
-        <p>가수: <input type="text" name="singer"></p>
+        <p>title: <input type="text" name="title" value="{{photo.title}}"></p>
         <br>
         ✧✧✧ <br>
-        <textarea name="body" id="" cols="30" rows="10"></textarea>
+        <textarea name="body" id="" cols="30" rows="10">{{photo.body}}</textarea>
         <br><br>
-        <button type="submit">추가</button>
+        <button type="submit">수정</button>
     </form>
 </body>
 

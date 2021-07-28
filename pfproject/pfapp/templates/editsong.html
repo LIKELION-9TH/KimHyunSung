@@ -23,7 +23,7 @@
 <body>
     <br><br><h2> ⋆˚.•  내 플레이리스트에 들어온 걸 환영해  •✩‧₊⋆</h2>
     <br><br>
-    <form action="{%url 'update' song.id%}" method="POST">
+    <form action="{%url 'updatesong' song.id%}" method="POST">
         {%csrf_token%}
         <p>노래: <input type="text" name="title" value="{{song.title}}"></p>
         <p>가수: <input type="text" name="singer" value="{{song.singer}}"></p>

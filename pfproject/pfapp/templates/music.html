@@ -9,39 +9,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/music.css">
+    <link rel="stylesheet" type="text/css" href="{% static '../static/music.css' %}">
+    <title>my playlist</title>
     <style>
-        body {
-            background-image: url('https://www.wallpapertip.com/wmimgs/79-796231_apple-iphone-x-landing-page-blank-png-iphone.png');
-            background-repeat: no-repeat;
-            background-size: 300px;
-            background-position-x: center;
-            background-position-y: 115px;
-        }
-        h1 {
-            text-align: center;
-        }
-        #songs {
-            text-align: center;
-        }
-        #add {
-            text-align: center;
-            position:   fixed;
-            left:       0;
-            bottom:     0;
-            margin-top: 280px;
-        }
         a:link { 
-            color:pink; 
+            color:lightgray; 
         }
         a:visited { 
-            color:pink; 
+            color:lightgray; 
         }
         a:hover { 
-            color:rgb(201, 126, 191); 
+            color:pink; 
         }
     </style>
-    <title>my playlist</title>
 </head>
 
 <body>
@@ -50,16 +30,16 @@
         <br><br>
         <!--<img src="{% static 'iphone_whitescreen.png'%}" height="100%" alt="아이폰사진">-->
         <div id="songs">
-            ~ 현성's playlist ~ &nbsp;
-            <a href="{%url 'new'%}">hi</a><br><br>
+            <b>~ 현성's playlist ~</b> &nbsp;
+            <a href="{%url 'new'%}"><b>+</b></a><br><br>
 
             {% for song in songs %}
             {{song.title}}
             - {{song.singer}} <br>
             ✧ {{song.body}}
             
-            <a href="{% url 'edit' song.id %}" style="font-size: small;">edit</a>
-            <a href="{% url 'delete' song.id %}" style="font-size: small;">bye</a>
+            <a href="{% url 'editsong' song.id %}" style="font-size: small;">e</a>
+            <a href="{% url 'deletesong' song.id %}" style="font-size: small;">b</a>
             <br><br>
             {% endfor %}
         </div>

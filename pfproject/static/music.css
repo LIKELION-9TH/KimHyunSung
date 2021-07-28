@@ -1,0 +1,30 @@
+body {
+    background-image: url('https://www.wallpapertip.com/wmimgs/79-796231_apple-iphone-x-landing-page-blank-png-iphone.png');
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-position-x: center;
+    background-position-y: 115px;
+}
+h1 {
+    text-align: center;
+    color: #f06595 ;
+}
+#songs {
+    text-align: center;
+}
+#add {
+    text-align: center;
+    position:   fixed;
+    left:       0;
+    bottom:     0;
+    margin-top: 280px;
+}
+a:link { 
+    color:gray; 
+}
+a:visited { 
+    color:gray; 
+}
+a:hover { 
+    color:rgb(201, 126, 191); 
+}
